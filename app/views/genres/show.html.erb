@@ -1,0 +1,17 @@
+<!-- NEED TO CREATE A PARTIAL WITH THIS AND index.html.erb FOR MOVIES TO HANDLE DUPLICATES!!!!!!-->
+<!-- DEAL WITH DUPLICATION IN THE SEARCH FORMS!!! -->
+<% if @movies.any? %>
+    <%= render "genre_search_bar" %>
+    <%= render "genre_sort_by" %>
+    <%= render "shared/movies_list" %>
+<% else %>
+    <% if params[:search] %>  <!-- Separate searched results from sorted  -->
+      <%= render "genre_search_bar" %>
+      <%= render "genre_sort_by" %>
+      <h1 style="padding-left: 25%;">No <%= @genre.category.titleize %> movie called "<%= params[:search] %>" could not be found!</h1>
+    <% elsif params[:sort]%>
+       <%= render "genre_search_bar" %>
+       <%= render "genre_sort_by" %>
+       <h1 style="padding-left: 25%;">No <%= params[:sort] %> <%= @genre.category.titleize %> movies could be found!</h1>
+    <% end %>
+<% end %>

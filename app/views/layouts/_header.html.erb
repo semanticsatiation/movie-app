@@ -1,0 +1,18 @@
+<header id="page-header">
+  <h1 id="page-h1"><%= link_to("Movie Studios:", root_path) %> <span id="page-span"><%= @page %></span></h1>
+  <% if current_user %>
+    <h2 style="float: right; color: white;">Signed in as <span class="link_style"><%= link_to(current_user.name.titleize, current_user) %></span></h2>
+  <% else %>
+      <h2 style="float: right; color: white;">Currently not signed in...</h2>
+  <% end %>
+</header>
+<h3>
+  | <%= link_to("Home", root_path) %> |
+  <%= link_to("Genres", movies_genres_path) %> |
+  <% if Genre.pluck(:category).any?{|x| url_for(:back).include?(x)} && !(params[:search]) && !(params[:sort]) %>  <!--  This is only being done to keep the conenction between genres and movie show page.  I also do not like how I'm putting code in like this AND the conditional statements are BAD! IT ALSO STOPS WORKING WHEN I ENTER THE REVIEWS PAGE FOR THE MOVIE-->
+    <%= link_to("Return to all #{genre_prev_page} movies", movies_genre_path(genre_prev_page)) %> | <!--  genre_prev_page located in ApplicationHelper  -->
+  <% elsif request.url == "http://localhost:3000/" %>
+  <% else %>
+    <%= link_to(@return_phrase, @return_link) %> |
+  <% end %> </h3>
+  <!--  The conditional statements above are to prevent weird dynamic return links when going from a sorted page to a movie within a sorted page.  For instance, sorting action movies by Best Rated and then going to the spiderman movie would produce a return link that says "Return to all Rated movies" instead of "Return to all Best Rated movies"  I need to learn how to return to sorted Genre pages instead of going back to a genre page and losing track of a sorted page  -->

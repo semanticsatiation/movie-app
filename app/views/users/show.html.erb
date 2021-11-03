@@ -1,0 +1,52 @@
+<% content_for(:title, @user.name) %>
+
+<article>
+  <header>
+    Full Name: <h1><%= @user.name.titleize %></h1>
+    Username: <h2><%= @user.username %></h2>
+    Email: <h3><%= @user.email %></h3>
+    <h4> Member since <%= @user.created_at.strftime("%B %Y") %></h4>
+    <% if @reviews.any? %>
+      <h1>Movies recently reviewed:</h1>
+      <ul>
+        <% @reviews.order("created_at desc").each do |review| %> <!-- get this code out of here later so not visible -->
+          <p>
+            <header id="review_header">
+              <%= link_to(review.user.name, review.user) %> gave <%= link_to(review.movie.title, movie_path(review.movie)) %> <%= Review::STARS[review.stars] %> <%= "star".pluralize(review.stars) %>:
+              <h3>"<%= link_to(review.comment, movie_reviews_path(review.movie))%>"</h3>
+            </header>
+          </p>
+          <h4>- review created <%= time_ago_in_words(review.created_at) %> ago</h4>
+          <% if current_user?(@user) || current_user_admin? %>
+            <h4>| <%= link_to("edit comment", edit_movie_review_path(review.movie, review.id)) %> |
+            <%= link_to("delete comment", movie_review_path(review.movie, review.id), method: :delete,
+                  data: {confirm: "Are you sure you want to delete your #{review.movie.title} comment?"}) %> |
+            </h4>
+          <% end %>
+          <h3> - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h3>
+        <% end %>
+      </ul>
+    <% end %>
+    <% if @favourite_movies.any? %>
+      <h2>
+        Favourited <%= pluralize(@favourite_movies.count, "movie") %>:
+      </h2>
+      <ul>
+        <% @favourite_movies.each do |movie| %>
+          <li>
+            <%= link_to(movie.title, movie_path(movie)) %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </header>
+  <footer>
+    <nav>
+      <% if current_user?(@user) %>
+        | <%= link_to("edit profile", edit_user_path) %> |
+        <%= link_to("delete profile", user_path(@user), method: :delete,
+                data: { confirm: "Are you sure you want to delete your profile?" }) %> |
+      <% end %>
+    </nav>
+  </footer>
+</article>

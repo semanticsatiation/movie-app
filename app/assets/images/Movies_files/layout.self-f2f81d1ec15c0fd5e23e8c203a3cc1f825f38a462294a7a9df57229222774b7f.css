@@ -1,0 +1,65 @@
+/* line 4, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/layout.scss */
+body#app_background {
+  background: rgba(0, 0, 0, 0.2) url("app_background.jpg");
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* line 12, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/layout.scss */
+header#page-header {
+  padding: 50px;
+  background-image: url("/assets/movie_reel.png");
+  background-size: cover;
+  background-position: center center;
+}
+
+/* line 19, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/layout.scss */
+span#page-span {
+  color: Wheat;
+  font-style: Italic;
+}
+
+/* line 24, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/layout.scss */
+h1#page-h1 {
+  padding: 5px 50px 5px;
+  background-size: 100px 50px;
+  background: Black;
+  height: 35px;
+}
+/* line 30, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/layout.scss */
+h1#page-h1 a {
+  color: Firebrick;
+}
+/* line 34, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/layout.scss */
+h1#page-h1 a:link {
+  text-decoration: none;
+}
+/* line 38, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/layout.scss */
+h1#page-h1 a:visited {
+  text-decoration: none;
+}
+/* line 42, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/layout.scss */
+h1#page-h1 a:hover {
+  text-decoration: underline;
+}
+/* line 46, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/layout.scss */
+h1#page-h1 a:active {
+  text-decoration: underline;
+}
+
+/* line 53, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/layout.scss */
+footer#page-footer {
+  text-align: center;
+  padding: 5px;
+  color: Brown;
+  background: Black;
+  border-top: 3px solid gray;
+}
+
+/* line 61, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/layout.scss */
+aside#sidebar {
+  float: right;
+  background: #F0F0F0;
+  width: 200px;
+}

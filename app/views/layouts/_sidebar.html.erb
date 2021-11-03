@@ -1,0 +1,49 @@
+<aside class="sidebar">
+  <nav class="nav_links">
+    <ul>
+      <li>
+        <%= link_to 'All Movies', root_path %>
+      </li>
+      <% if current_user_admin? %>
+        <li>
+          <%= link_to 'Add New Movie', new_movie_path %>
+        </li>
+        <li>
+          <%= link_to 'Add New Genre', new_movies_genre_path %>
+        </li>
+      <% end %>
+      <% if !(current_user) %>
+        <li>
+          <%= link_to 'Sign up', signup_path %>
+        </li>
+        <li>
+          <%= link_to 'Sign in', signin_path %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to 'Account settings', edit_user_path(current_user) %>
+        </li>
+        <li>
+          <%= link_to 'Sign out', session_path, method: :delete %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+  <%= content_for(:side_bar_extras) %>
+</aside>
+
+
+<%#
+<li>
+   link_to 'Hit Movies', filtered_movies_path(:hits)
+</li>
+<li>
+   link_to 'Flop Movies', filtered_movies_path(:flops)
+</li>
+<li>
+   link_to 'Upcoming Movies', filtered_movies_path(:upcoming)
+</li>
+<li>
+   link_to 'Recent Movies', filtered_movies_path(:recent)
+</li>
+%>

@@ -1,0 +1,47 @@
+/* line 1, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/movie_index.scss */
+h3#movie_genres {
+  color: grey;
+}
+/* line 4, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/movie_index.scss */
+h3#movie_genres a:link {
+  text-decoration: none;
+}
+/* line 7, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/movie_index.scss */
+h3#movie_genres a:visited {
+  text-decoration: none;
+}
+/* line 10, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/movie_index.scss */
+h3#movie_genres a:hover {
+  text-decoration: underline;
+}
+/* line 13, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/movie_index.scss */
+h3#movie_genres a:active {
+  text-decoration: underline;
+}
+
+/* line 20, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/movie_index.scss */
+h2#movie_link a:link {
+  text-decoration: none;
+}
+/* line 23, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/movie_index.scss */
+h2#movie_link a:visited {
+  text-decoration: none;
+}
+/* line 26, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/movie_index.scss */
+h2#movie_link a:hover {
+  text-decoration: underline;
+}
+/* line 29, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/movie_index.scss */
+h2#movie_link a:active {
+  text-decoration: underline;
+}
+
+/* line 34, /Users/BEN/pragmatic_studio/rails_studio/movies/app/assets/stylesheets/movie_index.scss */
+h2#movie_poster_background {
+  padding-left: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-image: url("/assets/movie_poster_background.png");
+  background-size: 300px 390px;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,64 @@
+<%= form_for(@movie) do |m| %>
+  <%= render "shared/errors", object: @movie %>
+  <p>
+    <%= m.label :title %><br/>
+    <%= m.text_field :title, autofocus: true %>
+  </p>
+  <p>
+    <%= m.label :rating %><br/>
+    <%= m.select :rating, Movie::RATINGS, prompt: "pick one" %>
+  </p>
+  <p>
+    <%= m.label :description %><br/>
+    <%= m.text_area :description, cols: 40, rows: 7%>
+  </p>
+  <p>
+    <%= m.label :cast %><br/>
+    <%= m.text_field :cast %>
+  </p>
+  <p>
+    <%= m.label :directors %><br/>
+    <%= m.text_field :director %>
+  </p>
+  <p>
+    <%= m.label :duration %><br/>
+    <%= m.text_field :duration %>
+  </p>
+  <p>
+    <%= m.label :trailer %><br/>
+    <%= m.text_field :trailer %>
+  </p>
+  <p>
+    <%= m.label :image_poster %><br/>
+    <%= m.text_field :image_file_name, size: 30,
+          placeholder: "GIF, JPG, or PNG file name"%>
+  </p>
+  <p>
+    <%= m.label :released_on %><br/>
+    <%= m.date_field :released_on %>
+  </p>
+  <p>
+    <%= m.label :total_gross %><br/>
+    <%= m.number_field :total_gross%>
+  </p>
+  <p>
+    <b>Genres</b>
+    <br>
+    <% Genre.all.each do |genre| %>
+      <label>
+        <input type="checkbox" name="movie[genre_ids][]" value="<%= genre.id %>"
+        <%= "checked" if @movie.genres.include?(genre) %> >
+        <%= genre.category %>
+      </label>
+      <br>
+    <% end %>
+  </p>
+  <!-- <p>
+    <%= m.label :genre, "Genre/s" %><br/>
+    <%= m.collection_check_boxes(:genre_ids, Genre.all, :id, :category) %>
+  </p> -->
+  <p>
+    <%= m.submit %> |
+    <%= link_to("Cancel", root_path) %>
+  </p>
+<% end %>

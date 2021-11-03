@@ -1,0 +1,19 @@
+
+<% @genres.each do |genre| %>
+    <div class="container">
+      <div class="header">
+        <h2><%= link_to("#{genre.category.titleize}", movies_genre_path(genre.category)) %></h2>
+      </div>
+      <div class="body">
+        <p id="movie_poster_background"><%= link_to(image_for(genre), movies_genre_path(genre.category)) %></p>
+      </div>
+      <div class="actions">
+        <% if current_user_admin? %>
+          <h2>| <%= link_to("edit genre", edit_movies_genre_path(genre.category)) %> |
+          <%= link_to("delete genre", movies_genre_path(genre.category), method: :delete,
+                    data: { confirm: "Are you sure you want to delete the #{genre.category.titleize} genre?"}) %> |
+          </h2>
+        <% end %>
+      </div>
+    </div>
+<% end %>

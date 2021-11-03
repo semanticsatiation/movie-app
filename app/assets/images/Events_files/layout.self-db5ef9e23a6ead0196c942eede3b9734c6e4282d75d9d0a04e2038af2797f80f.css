@@ -1,0 +1,27 @@
+/* line 3, /Users/BEN/pragmatic_studio/rails_studio/events/app/assets/stylesheets/layout.scss */
+header#page-header {
+  color: #F0F0F0;
+  background-color: #237CBE;
+  padding: 5px;
+  border-bottom: 5px solid #0f3652;
+}
+/* line 8, /Users/BEN/pragmatic_studio/rails_studio/events/app/assets/stylesheets/layout.scss */
+header#page-header h1 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 14, /Users/BEN/pragmatic_studio/rails_studio/events/app/assets/stylesheets/layout.scss */
+footer#page-footer {
+  color: #237CBE;
+  background-color: #F0F0F0;
+  padding: 5px;
+  border-top: 5px solid #b0b0b0;
+}
+
+/* line 21, /Users/BEN/pragmatic_studio/rails_studio/events/app/assets/stylesheets/layout.scss */
+aside#sidebar {
+  float: right;
+  background-color: #F0F0F0;
+  width: 200px;
+}

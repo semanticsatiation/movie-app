@@ -1,0 +1,18 @@
+<%= form_for @genre, url: movies_genre_path(@genre), html: { method: :put } do |g| %>
+
+  <%= render "shared/errors", object: @genre %>
+
+  <p>
+    <%= g.label :genre %><br/>
+    <%= g.text_field :category, autofocus: true %>
+  </p>
+  <p>
+    <%= g.label :image_file_name %><br>
+    <%= g.text_field :image_file_name,
+          placeholder: "GIF, JPG, or PNG file name" %>
+  </p>
+  <p>
+    <%= g.submit "Update Genre" %> |
+    <%= link_to("Cancel", movies_genres_path) %>
+  </p>
+<% end %>

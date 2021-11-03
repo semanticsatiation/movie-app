@@ -1,0 +1,16 @@
+current directory: /Users/ben/pragmatic_studio/rails_studio/movies/vendor/bundler/ruby/2.6.0/gems/eventmachine-1.2.7/ext/fastfilereader
+/Users/ben/.rbenv/versions/2.6.5/bin/ruby -I /Users/ben/.rbenv/versions/2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20211103-80736-1d3ir7l.rb extconf.rb
+creating Makefile
+
+current directory: /Users/ben/pragmatic_studio/rails_studio/movies/vendor/bundler/ruby/2.6.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= clean
+
+current directory: /Users/ben/pragmatic_studio/rails_studio/movies/vendor/bundler/ruby/2.6.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\=
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+
+current directory: /Users/ben/pragmatic_studio/rails_studio/movies/vendor/bundler/ruby/2.6.0/gems/eventmachine-1.2.7/ext/fastfilereader
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 fastfilereaderext.bundle ./.gem.20211103-80736-r6ncaq

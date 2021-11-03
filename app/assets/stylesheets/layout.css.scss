@@ -1,0 +1,110 @@
+$primary-color: Black;
+$secondary-color: Brown;
+
+body#app_background {
+  background:#171717;
+  color: #ffffff;
+}
+
+header#page-header {
+  padding: 20px;
+}
+
+span#page-span {
+  color: Wheat;
+  font-style: Italic;
+}
+
+h1#page-h1 {
+  padding: 5px 50px 5px;
+  background-size: 100px 50px;
+  background: $primary-color;
+
+  a {
+    color: Firebrick;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:active {
+    text-decoration: underline;
+  }
+
+}
+
+
+  a {
+    color: rgb(76, 117, 253);
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  a:active {
+    text-decoration: underline;
+  }
+
+
+footer#page-footer {
+  text-align: center;
+  padding: 5px;
+  color:  #ffffff;
+  background: $primary-color;
+  border-top: 3px solid lighten($primary-color, 50%);
+}
+
+.sidebar {
+  width: 175px;
+  position: fixed;
+  top: 1;
+  right: 0;
+  transform: translateY(-0px);
+  background-color: grey;
+  font-family: algerian, courier;
+}
+
+.nav_links {
+  transform: translateX(-10px);
+
+  a {
+    color: initial;  
+  }
+}
+
+.link_style {
+  a:link {
+    text-decoration: none;
+    color: yellow;
+  }
+  a:visited {
+    text-decoration: none;
+    color: yellow;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: yellow;
+  }
+  a:active {
+    text-decoration: underline;
+    color: yellow;
+  }
+}

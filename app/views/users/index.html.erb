@@ -1,0 +1,11 @@
+<header>
+  <%= pluralize(@users.count, "User") %>
+</header>
+
+<ul>
+  <% @users.each do |user| %>
+  <li>
+    <%= link_to(user.name, user) %>
+  </li>
+  <% end %>
+</ul>

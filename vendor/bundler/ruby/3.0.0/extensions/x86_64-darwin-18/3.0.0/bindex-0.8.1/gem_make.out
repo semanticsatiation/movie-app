@@ -1,0 +1,15 @@
+current directory: /Users/ben/pragmatic_studio/rails_studio/movies/vendor/bundler/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/ben/.rbenv/versions/3.0.2/bin/ruby -I /Users/ben/.rbenv/versions/3.0.2/lib/ruby/site_ruby/3.0.0 -r ./siteconf20211101-16900-fgvaxa.rb extconf.rb
+creating Makefile
+
+current directory: /Users/ben/pragmatic_studio/rails_studio/movies/vendor/bundler/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= clean
+
+current directory: /Users/ben/pragmatic_studio/rails_studio/movies/vendor/bundler/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\=
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/ben/pragmatic_studio/rails_studio/movies/vendor/bundler/ruby/3.0.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20211101-16900-r9ly0p/skiptrace/internal

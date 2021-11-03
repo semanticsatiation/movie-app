@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    
+
+
+    <link rel="stylesheet" media="all" href="./Movies_files/errors.self-3ee5a66c264abb89d47c53f58ee68589fe802aaabba7cf257ab9f81a1ab2367d.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./Movies_files/layout.self-f2f81d1ec15c0fd5e23e8c203a3cc1f825f38a462294a7a9df57229222774b7f.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./Movies_files/movie_index.self-1c0b55d25be6a8057521fc35e91d234473e21370e119f7def22c70ac07a48ebb.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./Movies_files/movies.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./Movies_files/reviews.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./Movies_files/reviews_index.self-960d94659be2e99d69a2835531f38476607747f41a5f57f97fc885aff2391a39.css" data-turbolinks-track="reload">
+<link rel="stylesheet" media="all" href="./Movies_files/application.self-af04b226fd7202dfc532ce7aedb95a0128277937e90d3b3a3d35e1cce9e16886.css" data-turbolinks-track="reload">
+    <script src="./Movies_files/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js" data-turbolinks-track="reload"></script>
+<script src="./Movies_files/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js" data-turbolinks-track="reload"></script>
+<script src="./Movies_files/turbolinks.self-569ee74eaa15c1e2019317ff770b8769b1ec033a0f572a485f64c82ddc8f989e.js" data-turbolinks-track="reload"></script>
+<script src="./Movies_files/action_cable.self-5454023407ffec0d29137c7110917e1e745525ae9afbc05f52104c4cd6597429.js" data-turbolinks-track="reload"></script>
+<script src="./Movies_files/cable.self-6e0514260c1aa76eaf252412ce74e63f68819fd19bf740595f592c5ba4c36537.js" data-turbolinks-track="reload"></script>
+<script src="./Movies_files/movies.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="reload"></script>
+<script src="./Movies_files/reviews.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js" data-turbolinks-track="reload"></script>
+<script src="./Movies_files/application.self-b89234cf2659d7fedea75bca0b8d231ad7dfc2f3f57fcbaf5f44ed9dc384137b.js" data-turbolinks-track="reload"></script>
+  <title>Movies</title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="0kibXk+lGYNxwRAcRV0HWoBrH0wIz5HzG3t9PSf1ebusaLQJGUn+l5Q8dxfUYv3XutbZNeTMN/By7ZnWmbC+/w=="></head>
+
+  <body id="app_background">
+
+    <header id="page-header">
+  <h1 id="page-h1"><a href="http://localhost:3000/">Movie Studios:</a> <span id="page-span">now showing 10 movies</span></h1>
+      <!-- @page is connected to the controllers page and I need to find out how to pluralize from outside the html doc-->
+</header>
+
+
+    
+    
+
+    <aside id="sidebar">
+  <nav>
+    <ul>
+      <li>
+        <a href="http://localhost:3000/">All Movies</a>
+      </li>
+      <li>
+        <a href="http://localhost:3000/movies/new">Add New Movie</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+
+
+    <h3 id="movie_genres">
+  | <a href="http://localhost:3000/">Action</a> |
+  <a href="http://localhost:3000/">Thriller</a> |
+  <a href="http://localhost:3000/">Horror</a> |
+  <a href="http://localhost:3000/">Drama</a> |
+  <a href="http://localhost:3000/">Comedy</a> |
+  <a href="http://localhost:3000/">Science Fiction</a> |
+  <a href="http://localhost:3000/">Fantasy</a> |
+  <a href="http://localhost:3000/">Romance</a> |</h3>
+
+<a href="http://localhost:3000/movies/new">Add New Movie</a>
+
+
+    <article>
+      <header>
+        <h2 id="movie_poster_background"> <a href="http://localhost:3000/movies/1"><img src="./Movies_files/superman-b6b9e0449b59e2d89905f22a7d1a243bdba5ec81876e0ee84d3b48c300b2c91a.jpg" alt="Superman" width="250" height="350"></a></h2>
+        <!-- <br><a href="/movies/1"><img src="/assets/superman-b6b9e0449b59e2d89905f22a7d1a243bdba5ec81876e0ee84d3b48c300b2c91a.jpg" alt="Superman" width="250" height="350" /></a> -->
+        <h2 id="movie_link"><a href="http://localhost:3000/movies/1">Superman</a> (1978)</h2>
+        <h3>Christopher Reeve, Gene Hackman, Marl...</h3>
+      </header>
+      <p>
+        An alien orphan is sent from his dyin...
+      </p>
+      <table>
+        <tbody><tr>
+          <th>Release Date:</th>
+          <td>December 15, 1978</td>
+        </tr>
+        <tr>
+          <th>Rating:</th>
+          <td>PG</td>
+        </tr>
+        <tr>
+          <th>Duration:</th>
+          <td>3h 8m</td>
+        </tr>
+        <tr>
+          <th>Total Gross:</th>
+          <td><strong>Flop!</strong></td>
+        </tr>
+      </tbody></table>
+      <h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
+    </article>
+
+
+    <article>
+      <header>
+        <h2 id="movie_poster_background"> <a href="http://localhost:3000/movies/2"><img src="./Movies_files/iron_man-b137b17df981c49a5a54855ad441ba664a17a05d9e1fceed4e1db87498d0248d.jpg" alt="Iron man" width="250" height="350"></a></h2>
+        <!-- <br><a href="/movies/2"><img src="/assets/iron_man-b137b17df981c49a5a54855ad441ba664a17a05d9e1fceed4e1db87498d0248d.jpg" alt="Iron man" width="250" height="350" /></a> -->
+        <h2 id="movie_link"><a href="http://localhost:3000/movies/2">Iron Man</a> (2008)</h2>
+        <h3>Robert Downey Jr., Terrence Howard, J...</h3>
+      </header>
+      <p>
+        After being held captive in an Afghan...
+      </p>
+      <table>
+        <tbody><tr>
+          <th>Release Date:</th>
+          <td>May 02, 2008</td>
+        </tr>
+        <tr>
+          <th>Rating:</th>
+          <td>PG-13</td>
+        </tr>
+        <tr>
+          <th>Duration:</th>
+          <td>2h 6m</td>
+        </tr>
+        <tr>
+          <th>Total Gross:</th>
+          <td>$318,412,101.00</td>
+        </tr>
+      </tbody></table>
+      <h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
+    </article>
+
+
+    <article>
+      <header>
+        <h2 id="movie_poster_background"> <a href="http://localhost:3000/movies/3"><img src="./Movies_files/spiderman-5255536d82a09791d4b55b1f6f13d74c74140f684735e823136327a0aceca0eb.jpg" alt="Spiderman" width="250" height="350"></a></h2>
+        <!-- <br><a href="/movies/3"><img src="/assets/spiderman-5255536d82a09791d4b55b1f6f13d74c74140f684735e823136327a0aceca0eb.jpg" alt="Spiderman" width="250" height="350" /></a> -->
+        <h2 id="movie_link"><a href="http://localhost:3000/movies/3">Spider-Man</a> (2002)</h2>
+        <h3>Tobey Maguire, Willem Dafoe, Kirsten ...</h3>
+      </header>
+      <p>
+        When bitten by a genetically modified...
+      </p>
+      <table>
+        <tbody><tr>
+          <th>Release Date:</th>
+          <td>May 03, 2002</td>
+        </tr>
+        <tr>
+          <th>Rating:</th>
+          <td>PG</td>
+        </tr>
+        <tr>
+          <th>Duration:</th>
+          <td>2h 1m</td>
+        </tr>
+        <tr>
+          <th>Total Gross:</th>
+          <td>$403,706,375.00</td>
+        </tr>
+      </tbody></table>
+      <h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
+    </article>
+
+
+    <article>
+      <header>
+        <h2 id="movie_poster_background"> <a href="http://localhost:3000/movies/4"><img src="./Movies_files/batman-a9b3d268e87e22ca3b08ccec6c6d68eb2c94279e19e2423f85f673afbbe8d7ef.jpg" alt="Batman" width="250" height="350"></a></h2>
+        <!-- <br><a href="/movies/4"><img src="/assets/batman-a9b3d268e87e22ca3b08ccec6c6d68eb2c94279e19e2423f85f673afbbe8d7ef.jpg" alt="Batman" width="250" height="350" /></a> -->
+        <h2 id="movie_link"><a href="http://localhost:3000/movies/4">Batman</a> (1989)</h2>
+        <h3>Michael Keaton, Jack Nicholson, Kim B...</h3>
+      </header>
+      <p>
+        Having witnessed his parents' brutal ...
+      </p>
+      <table>
+        <tbody><tr>
+          <th>Release Date:</th>
+          <td>June 23, 1989</td>
+        </tr>
+        <tr>
+          <th>Rating:</th>
+          <td>PG-13</td>
+        </tr>
+        <tr>
+          <th>Duration:</th>
+          <td>2h 6m</td>
+        </tr>
+        <tr>
+          <th>Total Gross:</th>
+          <td>$533,345,358.00</td>
+        </tr>
+      </tbody></table>
+      <h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
+    </article>
+
+
+    <article>
+      <header>
+        <h2 id="movie_poster_background"> <a href="http://localhost:3000/movies/10"><img src="./Movies_files/endgame-69aece8505bc306d00e184640c4de78d7d596a4f521fc06ec57f1d81d591541d.jpg" alt="Endgame" width="250" height="350"></a></h2>
+        <!-- <br><a href="/movies/10"><img src="/assets/endgame-69aece8505bc306d00e184640c4de78d7d596a4f521fc06ec57f1d81d591541d.jpg" alt="Endgame" width="250" height="350" /></a> -->
+        <h2 id="movie_link"><a href="http://localhost:3000/movies/10">Avengers: Endgame</a> (2019)</h2>
+        <h3>Chris Evans, Robert Downey Jr., Scarl...</h3>
+      </header>
+      <p>
+        Adrift in space with no food or water...
+      </p>
+      <table>
+        <tbody><tr>
+          <th>Release Date:</th>
+          <td>April 26, 2019</td>
+        </tr>
+        <tr>
+          <th>Rating:</th>
+          <td>PG-13</td>
+        </tr>
+        <tr>
+          <th>Duration:</th>
+          <td>3h 2m</td>
+        </tr>
+        <tr>
+          <th>Total Gross:</th>
+          <td>N/A</td>
+        </tr>
+      </tbody></table>
+      <h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
+    </article>
+
+
+    <article>
+      <header>
+        <h2 id="movie_poster_background"> <a href="http://localhost:3000/movies/11"><img src="./Movies_files/spiderman_far_from_home-c82cbc4b0eb6a88e927d18017c6dd45967877555014aa6435e3bb382a049377b.jpg" alt="Spiderman far from home" width="250" height="350"></a></h2>
+        <!-- <br><a href="/movies/11"><img src="/assets/spiderman_far_from_home-c82cbc4b0eb6a88e927d18017c6dd45967877555014aa6435e3bb382a049377b.jpg" alt="Spiderman far from home" width="250" height="350" /></a> -->
+        <h2 id="movie_link"><a href="http://localhost:3000/movies/11">Spider-Man: Far From Home</a> (2019)</h2>
+        <h3>Tom Holland, Jake Gyllenhaal, Zendaya...</h3>
+      </header>
+      <p>
+        Peter Parker's relaxing European vaca...
+      </p>
+      <table>
+        <tbody><tr>
+          <th>Release Date:</th>
+          <td>June 05, 2019</td>
+        </tr>
+        <tr>
+          <th>Rating:</th>
+          <td>PG-13</td>
+        </tr>
+        <tr>
+          <th>Duration:</th>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <th>Total Gross:</th>
+          <td>N/A</td>
+        </tr>
+      </tbody></table>
+      <h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
+    </article>
+
+
+    <article>
+      <header>
+        <h2 id="movie_poster_background"> <a href="http://localhost:3000/movies/12"><img src="./Movies_files/brightburn-009b86f6a1195bf5cd23a34437eac4fb02b298cbb20984db3ff80dc7cd76ccbc.jpg" alt="Brightburn" width="250" height="350"></a></h2>
+        <!-- <br><a href="/movies/12"><img src="/assets/brightburn-009b86f6a1195bf5cd23a34437eac4fb02b298cbb20984db3ff80dc7cd76ccbc.jpg" alt="Brightburn" width="250" height="350" /></a> -->
+        <h2 id="movie_link"><a href="http://localhost:3000/movies/12">Brightburn</a> (2019)</h2>
+        <h3>Jackson A. Dunn, David Yarovesky, Eli...</h3>
+      </header>
+      <p>
+        What if a child from another world cr...
+      </p>
+      <table>
+        <tbody><tr>
+          <th>Release Date:</th>
+          <td>May 24, 2019</td>
+        </tr>
+        <tr>
+          <th>Rating:</th>
+          <td>NR</td>
+        </tr>
+        <tr>
+          <th>Duration:</th>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <th>Total Gross:</th>
+          <td>N/A</td>
+        </tr>
+      </tbody></table>
+      <h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
+    </article>
+
+
+    <article>
+      <header>
+        <h2 id="movie_poster_background"> <a href="http://localhost:3000/movies/13"><img src="./Movies_files/inception-efe38bedb4d6e43d46b954a9439c6586136ca58ade5a5247e89052e08bc9ab50.jpg" alt="Inception" width="250" height="350"></a></h2>
+        <!-- <br><a href="/movies/13"><img src="/assets/inception-efe38bedb4d6e43d46b954a9439c6586136ca58ade5a5247e89052e08bc9ab50.jpg" alt="Inception" width="250" height="350" /></a> -->
+        <h2 id="movie_link"><a href="http://localhost:3000/movies/13">Inception</a> (2010)</h2>
+        <h3>Leonardo DiCaprio, Joseph Gordon-Levi...</h3>
+      </header>
+      <p>
+        Dom Cobb is a thief with the rare abi...
+      </p>
+      <table>
+        <tbody><tr>
+          <th>Release Date:</th>
+          <td>July 13, 2010</td>
+        </tr>
+        <tr>
+          <th>Rating:</th>
+          <td>PG-13</td>
+        </tr>
+        <tr>
+          <th>Duration:</th>
+          <td>2h 28m</td>
+        </tr>
+        <tr>
+          <th>Total Gross:</th>
+          <td>$292,576,195.00</td>
+        </tr>
+      </tbody></table>
+      <h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
+    </article>
+
+
+    <article>
+      <header>
+        <h2 id="movie_poster_background"> <a href="http://localhost:3000/movies/14"><img src="./Movies_files/aladdin-b133f691532921eee9f9a13f785f2cb3f6820677787b16e271bce605031e8905.jpg" alt="Aladdin" width="250" height="350"></a></h2>
+        <!-- <br><a href="/movies/14"><img src="/assets/aladdin-b133f691532921eee9f9a13f785f2cb3f6820677787b16e271bce605031e8905.jpg" alt="Aladdin" width="250" height="350" /></a> -->
+        <h2 id="movie_link"><a href="http://localhost:3000/movies/14">Aladdin</a> (2019)</h2>
+        <h3>Will Smith, Mena Massoud, Nasim Pedra...</h3>
+      </header>
+      <p>
+        A kindhearted Arabian street urchin a...
+      </p>
+      <table>
+        <tbody><tr>
+          <th>Release Date:</th>
+          <td>May 24, 2019</td>
+        </tr>
+        <tr>
+          <th>Rating:</th>
+          <td>NR</td>
+        </tr>
+        <tr>
+          <th>Duration:</th>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <th>Total Gross:</th>
+          <td>N/A</td>
+        </tr>
+      </tbody></table>
+      <h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
+    </article>
+
+
+    <article>
+      <header>
+        <h2 id="movie_poster_background"> <a href="http://localhost:3000/movies/15"><img src="./Movies_files/starwarsnewhope-dc2e877535a9abd88682da59332938f2647ad8f1577d944bccee95277878b5a6.jpg" alt="Starwarsnewhope" width="250" height="350"></a></h2>
+        <!-- <br><a href="/movies/15"><img src="/assets/starwarsnewhope-dc2e877535a9abd88682da59332938f2647ad8f1577d944bccee95277878b5a6.jpg" alt="Starwarsnewhope" width="250" height="350" /></a> -->
+        <h2 id="movie_link"><a href="http://localhost:3000/movies/15">Star Wars: Episode IV - A New Hope</a> (1977)</h2>
+        <h3> Carrie Fisher, Mark Hamill, Harrison...</h3>
+      </header>
+      <p>
+        The Imperial Forces -- under orders f...
+      </p>
+      <table>
+        <tbody><tr>
+          <th>Release Date:</th>
+          <td>May 25, 1977</td>
+        </tr>
+        <tr>
+          <th>Rating:</th>
+          <td>PG</td>
+        </tr>
+        <tr>
+          <th>Duration:</th>
+          <td>2h 5m</td>
+        </tr>
+        <tr>
+          <th>Total Gross:</th>
+          <td>$307,263,857.00</td>
+        </tr>
+      </tbody></table>
+      <h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</h4>
+    </article>
+
+
+
+    <footer id="page-footer">
+  <p>
+    Copyright © 2019
+    <!-- could use a link here to link to my company -->
+  </p>
+</footer>
+
+
+  
+
+</body></html>

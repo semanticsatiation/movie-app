@@ -1,0 +1,16 @@
+<% if @movies.any? %>
+  <%= render "movies_search_bar" %>
+  <%= render "movies_sort_by" %>
+  <%= render "shared/movies_list" %>
+
+<% else %>
+    <% if params[:search] %>
+      <%= render "movies_search_bar" %>
+      <%= render "movies_sort_by" %>
+      <h1 style="padding-left: 25%;">"<%= params[:search] %>" could not be found!</h1>
+    <% elsif params[:sort]%>
+       <%= render "movies_search_bar" %>
+       <%= render "movies_sort_by" %>
+       <h1 style="padding-left: 25%;">No <%= params[:sort] %> movies could be found!</h1>
+    <% end %>
+<% end %>

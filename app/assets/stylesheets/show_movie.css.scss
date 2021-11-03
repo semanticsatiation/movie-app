@@ -1,0 +1,22 @@
+h2#show_movie_poster_background {
+
+  padding-left: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: asset_url('movie_poster_background.png');
+  background-size: 350px 440px;
+  background-repeat: no-repeat;
+
+}
+
+span#no_reviews_movie_show {
+  color: Firebrick;
+}
+
+span#reviews_bad_movie_show {
+  color: Crimson;
+}
+
+span#reviews_good_movie_show {
+  color: Gold  ;
+}

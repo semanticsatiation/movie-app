@@ -1,0 +1,50 @@
+.movie_container {
+    display:inline-block;
+    width: 390px;
+    height: 600px;
+    .title {
+    }
+}
+
+span#restriction_description_2 {
+  color: Firebrick
+}
+
+span#no_reviews {
+  color: Firebrick;
+}
+
+span#reviews_bad {
+  color: Crimson;
+}
+
+span#reviews_good {
+  color: Gold  ;
+}
+
+h2#movie_link {
+
+  a:link {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  a:active {
+    text-decoration: underline;
+  }
+}
+
+p#movie_poster_background {
+
+  padding-left: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: asset_url('movie_poster_background.png');
+  background-size: 350px 440px;
+  background-repeat: no-repeat;
+
+}

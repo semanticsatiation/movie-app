@@ -1,0 +1,114 @@
+<% content_for(:title, "#{@movie.title} (#{@movie.released_on.year})") %>
+
+<article>
+  <h2 id="show_movie_poster_background"><%= image_for(@movie) %></h2>
+  <header>
+    <h1><%= @movie.title %><%= " (#{@movie.released_on.year})" %></h1>
+  </header>
+
+  <% if current_user %>
+    <% if @current_favourite %>
+      <h3>
+        <%= button_to("Unfavourite!", movie_favourite_path(@movie, @current_favourite), method: :delete) %>
+      </h3>
+    <% else %>
+      <h3>
+        <%= button_to("Favourite!", movie_favourites_path(@movie)) %>
+      </h3>
+    <% end %>
+  <% end %>
+  <h3>
+    Genres:
+    <% @genres.each do |g| %>
+      <%= link_to(g.category.titleize, genre_path(g.category)) %>
+    <% end %>
+  </h3>
+  <h3>Average User Review:
+    <% if @movie.no_reviews? %>
+     <%= "<span id='no_reviews_movie_show'>There seems to be no reviews for #{@movie.title}!</span>".html_safe %>
+    <% else %>
+     <%= @movie.flop? ? ("<span id='reviews_bad_movie_show'>#{@movie.average_stars.round(1)}</span> #{'star'.pluralize(@movie.average_stars.round(1))}".html_safe) : ("<span id='reviews_good_movie_show'>#{@movie.average_stars.round(1)}</span> #{'star'.pluralize(@movie.average_stars.round(1))}".html_safe) %>
+    <% end %>
+    <!-- THIS NEEDS TO BE FIXED!!!  Terrible code especially when there is a helper method that does this already!
+    I only did this to stop FLOP! from showing up on the show page... -->
+  </h3>
+
+  <h3>
+    Rating:
+  </h3>
+  <p>
+    <%= @movie.rating %>
+  </p>
+
+  <h3>Description:</h3>
+  <p>
+    <%= @movie.description %>
+  </p>
+
+  <h3>Trailer:</h3>
+  <p>
+    <iframe width="560" height="315" src=<%= @movie.trailer %> frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </p>
+
+  <h3>Cast:</h3>
+  <p>
+    <%= @movie.cast %>
+  </p>
+
+  <h3>Directors:</h3>
+  <p>
+    <%= @movie.director %>
+  </p>
+
+  <h3>Duration:</h3>
+  <p>
+    <%= @movie.duration %>
+  </p>
+
+  <h3>Released on:</h3>
+  <p>
+    <%= @movie.released_on %>
+  </p>
+
+  <h3>Total Gross:</h3>
+  <p>
+    <%= format_gross(@movie) %>
+  </p>
+
+</article>
+
+<h3>Most Recent Reviews:</h3>
+<% if @movie.any_reviews? %>
+  <h4>===============================</h4>
+  <% @movie.recent_reviews.each do |review| %>
+  <p>
+    <%= link_to(review.user.name, review.user) %> gave it <%= Review::STARS[review.stars] %> <%= "star".pluralize(review.stars) %>: <h4>"<%= review.comment.truncate(25) %>"</h4>
+  </p>
+
+  <h4>===============================</h4>
+  <% end %>
+  <h4>| <%= link_to("Read the #{pluralize(@movie.reviews.size, 'review')}!", movie_reviews_path(@movie)) %> | <%= link_to("Write a review!", new_movie_review_path(@movie)) %> |</h4>
+<% else %>
+     <%= review_restriction(@movie) %>
+<% end %>
+
+<br>| <%= link_to("All Movies", root_path) %> |
+<% if current_user_admin? %>
+  <%= link_to("Edit", edit_movie_path) %> |
+  <%= link_to("Delete", movie_path(@movie), method: :delete,
+        data: { confirm: "Are you sure you want to delete #{@movie.title}?" }) %> |
+<% end %>
+
+
+<% content_for(:side_bar_extras) do %>
+  <% if @fans.any? %>
+    <%= pluralize(@fans.count, "fan") %>:
+    <ul>
+      <% @fans.each do |user| %>
+        <li>
+          <%= link_to(user.name, user) %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>

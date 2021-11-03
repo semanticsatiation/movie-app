@@ -1,0 +1,45 @@
+  <% @movies.each do |movie| %>
+      <div class="movie_container">
+        <header>
+          <p id="movie_poster_background"> <%= link_to(image_for(movie), movie_path(movie)) %></p>
+          <div class="title">
+            <h2 id="movie_link"><%= link_to("#{movie.title}",  movie_path(movie) ) %><%= " (#{movie.released_on.year})" %></h2>
+          </div>
+          <h3>Average User Review:
+            <% if movie.any_reviews? %>
+              <%= format_average_stars(movie) %>
+            <% else %>
+              <%= review_restriction_movie_index(movie) %>
+            <% end %>
+          <h3>
+            Genres:
+            <% movie.genres.limit(2).each do |g| %>
+              <%= link_to(g.category.titleize, genre_path(g.category)) %>
+            <% end %>
+          </h3>
+          <h3><%= movie.cast.truncate(40) %></h3>
+        </header>
+        <p>
+          <%=movie.description.truncate(40)%>
+        </p>
+        <table>
+          <tr>
+            <th>Release Date:</th>
+            <td><%=movie.released_on%></td>
+          </tr>
+          <tr>
+            <th>Rating:</th>
+            <td><%=movie.rating%></td>
+          </tr>
+          <tr>
+            <th>Duration:</th>
+            <td><%=movie.duration%></td>
+          </tr>
+          <tr>
+            <th>Total Gross:</th>
+            <td><%=format_gross(movie)%></td>
+          </tr>
+        </table>
+        <h4>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </h4>
+      </div>
+  <% end %>
