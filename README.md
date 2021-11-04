@@ -5,8 +5,6 @@ Flix is an movie application that allows users to add and review movies.
 ## Demo
 https://flix-movies.herokuapp.com/
 
-<img alt="App Themes Gif" src="https://user-images.githubusercontent.com/74139058/139150252-d7c154d9-c87c-4f9e-ad8c-6857ebeac8d5.gif" width="700" />
-
   
 ## Tech Stack
 
@@ -19,8 +17,7 @@ https://flix-movies.herokuapp.com/
 **Database:** PostgreSQL
 
 
-## Screenshots
-<img width="500" alt="Movie App" src="https://user-images.githubusercontent.com/74139058/140380625-a0f50489-f264-42ca-aaf2-357624f3e3d7.png">
+## Screenshots<img width="500" alt="Screen Shot 2021-11-04 at 12 34 38 PM" src="https://user-images.githubusercontent.com/74139058/140382118-9cc3b1eb-d7be-4b85-94fc-e363bffb80b0.png">
 
 ## Lessons learned
 This was my first big application ever so it was a huge learning experience for me overall.
