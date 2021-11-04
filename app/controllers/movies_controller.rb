@@ -31,6 +31,7 @@ class MoviesController < ApplicationController
       @page = "now showing #{@movies.count} #{'movie'.pluralize(@movies.count)}"
     end
   end
+  
 
   def show
     @genres = @movie.genres
